@@ -97,7 +97,7 @@ a{
     justify-content: center;
     gap: 80px;
     margin-top: 60px;
-    width: fit-content;
+    width: 100%;
 }
 
 .home-text {
@@ -130,7 +130,6 @@ a{
     margin-right: auto;
     margin-top: 30px;
 }
-
 
 /* Wisata dan Kuliner */
 .rectangle{
@@ -326,7 +325,7 @@ a{
         line-height: 1.7;
     }
 
-    .home-text .photo {
+        .home-image {
         order: 4;
         width: 100%;
         height: 210px;
