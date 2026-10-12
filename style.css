@@ -1,0 +1,409 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.box{
+    margin: 0 10% 40px;
+}
+
+.Background{
+    background: linear-gradient(
+        to bottom,
+        #f2f1e8 0,
+        #f2f1e8 80px,
+        #6c7a62 80px,
+        #6c7a62 100%
+    );
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    min-height: 60px;
+    margin-left: 10%;
+}
+
+.logo, .nav-link{
+    color: #6c7a62;
+}
+
+.logo{
+    font-size: 30px;
+}
+
+.nav-link{
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+}
+
+.nav-link:hover{
+    text-decoration: underline;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Font */
+.Abril-Fatface {
+  font-family: "Abril Fatface", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.yeseva-one-regular {
+  font-family: "Yeseva One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.fraunces-regular {
+  font-family: "Fraunces", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "SOFT" 0,
+    "WONK" 0;
+}
+
+.inter-uniquifier {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Home */
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 60px;
+    width: fit-content;
+}
+
+.home-text {
+    text-align: left;
+    width: 400px;
+}
+
+.home-image{
+    border-radius: 999px;
+    background-size: cover; 
+    background-position: center; 
+    background-image: url('image/JFC.jpg');
+    width: 500px;
+    height: 300px;
+    background-repeat: no-repeat;
+    transform: rotate(6deg);
+    box-shadow: 0 0 40px 15px #FEF3E2;
+}
+
+.home-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 110px;
+    border-radius: 30px;
+    border: 2px solid #6f8068;
+    background-color: #f2f1e8;
+    margin-left: 5px;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+
+/* Wisata dan Kuliner */
+.rectangle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    left: 12%;
+    top: 60%;
+    width: min(550px, 80vw);
+    height: 150px;
+    transform: translate(-50%, -50%);
+    border: 2px solid #f2f1e8;
+    border-radius: 10px;
+    background-color: #f2f1e8;
+    overflow: hidden;
+
+    width: 20%;
+    height:60%;
+}
+
+.photo{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    flex: 0 0 auto;
+    padding: 0 12px;
+    box-sizing: border-box;
+}
+
+.photo img{
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    margin-bottom: 8px;
+}
+
+.description{
+    width: 100%;
+    margin: 0;
+    padding: 0 16px 16px;
+    box-sizing: border-box;
+    color: #6c7a62;
+    font-size: 10px;
+    text-align: justify;
+}
+
+/* Event dan Budaya */
+.jfc-image{
+    width: 80%;
+    height: 180px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
+
+}
+
+.jfc-image img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+    border-radius: 10px;
+}
+
+.jfc-text{
+    margin-top: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+    color: #f2f1e8;
+    text-align: justify;
+}
+
+.budaya-event .box{
+    margin-bottom: 60px;
+}
+
+.budaya-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.budaya-item{
+    width: 100%;
+}
+
+.budaya-image{
+    width: 50%;         
+    height: auto;    
+    margin-top: 40px;   
+    border-radius: 10px
+}
+
+.budaya-image img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: inherit;
+}
+
+.budaya-text{
+    color: #f2f1e8;
+    text-align: justify;
+    width: 100%;
+}
+
+/* Musik */
+.patrol-container {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.patrol-container img {
+    display: block;
+    width: 40%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.patrol-text {
+    color: #f2f1e8;
+    margin-top: 20px;
+    text-align: justify;
+}
+
+
+/* RESPONSIVE UNTUK HP */
+
+@media screen and (max-width: 768px) {
+
+    html, body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .box {
+        margin: 0 5% 30px;
+    }
+
+    .navbar {
+        width: 100%;
+        margin-left: 0;
+        gap: 10px 16px;
+        flex-wrap: wrap;
+        padding: 10px 0;
+        box-sizing: border-box;
+    }
+
+    .logo {
+        font-size: 26px;
+        width: 100%;
+    }
+
+    .nav-link {
+        font-size: 12px;
+    }
+
+    .home {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        margin-top: 20px;
+    }
+
+    .home-text {
+        display: contents;
+    }
+
+    .home-text p:first-child {
+        order: 1;
+        margin-top: 20px !important;
+        font-size: 15px !important;
+    }
+
+    .home-text .yeseva-one-regular {
+        order: 2;
+        font-size: 40px !important;
+    }
+
+    .home-text p:nth-of-type(2) {
+        order: 3;
+        font-size: 13px !important;
+        line-height: 1.7;
+    }
+
+    .home-text .photo {
+        order: 4;
+        width: 100%;
+        height: 210px;
+        margin-top: 25px !important;
+        box-sizing: border-box;
+        border-radius: 999px;
+        background-position: center;
+        box-shadow: 0 0 20px 5px #FEF3E2;
+    }
+
+    /* Tombol Selengkapnya (paling bawah, di bawah foto) */
+    .home-button {
+        order: 5;
+        margin-top: 25px;
+        margin-bottom: 20px;
+    }
+
+    /* Wisata dan Kuliner */
+    .rectangle {
+        position: static;
+        transform: none;
+        width: 100%;
+        height: auto;
+        margin: 20px auto;
+        box-sizing: border-box;
+    }
+
+    .description {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+    
+    /* Budaya dan event */
+    .jfc-image {
+        width: 90%;
+        height: 160px;
+    }
+
+    .jfc-text {
+        margin-left: 5%;
+        margin-right: 5%;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .budaya-container {
+        width: 90%;
+        margin: 0 auto;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .budaya-item {
+        width: 100%;
+    }
+
+    .budaya-image {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .budaya-text {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    /* Musik */
+    .patrol-container {
+        width: 90%;
+    }
+
+    .patrol-container img {
+        width: 100%;
+    }
+
+    .patrol-text {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+}
