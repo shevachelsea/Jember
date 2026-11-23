@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budaya dan Event</title>
+    
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Box Icons -->
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Yeseva+One&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Navbar -->
+     <header>
+        <a href="home.html" class="logo"><i class = 'bx bx-leaf-alt'></i> Jember</a>
+
+        <!-- Navbar List -->
+        <ul class="navbar">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="wisata.html">Wisata</a></li>
+            <li><a href="kuliner.html">Kuliner</a></li>
+            <li><a href="budaya.html" class="active">Budaya</a></li>
+            <li><a href="musik.html">Musik</a></li>
+        </ul>
+        <button id="theme-toggle">
+            <i class="bx bx-moon"></i>
+        </button>
+     </header>
+
+     <section class="budaya">
+        <div class="budaya-container">
+
+            <!-- Kartu JFC -->
+            <div class="budaya-card">
+                <div class="card-img">
+                    <img src="image/jfc2026.jpg" alt="JFC">
+                </div>
+                <div class="card-body">
+                    <h3>Jember Fashion Carnaval</h3>
+                    <p>Jember Fashion Carnaval adalah acara tahunan yang menampilkan parade kostum dan pertunjukan seni yang memukau.</p>
+                    <button class="btn open-popup" data-target="#popup-jfc">Baca Selengkapnya</button>
+                </div>
+            </div>
+             
+            <!-- Kartu Tari Lahbako -->
+            <div class="budaya-card">
+                <div class="card-img">
+                    <img src="image/tari lahbako.jpeg" alt="Tari Lahbako">
+                </div>
+                <div class="card-body">
+                    <h3>Tari Lahbako</h3>
+                    <p>Tari Lahbako adalah tarian tradisional yang menggambarkan kehidupan para petani tembakau di Jember, Jawa Timur.</p>
+                    <button class="btn open-popup" data-target="#popup-lahbako">Baca Selengkapnya</button>
+                </div>
+            </div>
+             
+            <!-- Kartu Larung Sesaji -->
+            <div class="budaya-card">
+                <div class="card-img">
+                    <img src="image/larung sesaji.jpg" alt="Larung Sesaji">
+                </div>
+                <div class="card-body">
+                    <h3>Larung Sesaji</h3>
+                    <p>Larung sesaji adalah tradisi menghanyutkan sajian berupa hasil bumi ke laut sebagai wujud syukur dan doa keselamatan.</p>
+                    <button class="btn open-popup" data-target="#popup-larungsesaji">Baca Selengkapnya</button>
+                </div>
+            </div>
+
+            <!-- Can-Macanan Kadduk -->
+            <div class="budaya-card">
+                <div class="card-img">
+                    <img src="image/macan.jpg" alt="Can-Macanan Kadduk">
+                </div>
+                <div class="card-body">
+                    <h3>Can-Macanan Kadduk</h3>
+                    <p>Seni pertunjukan rakyat khas Kabupaten Jember dengan sosok macan raksasa dari karung goni yang dimainkan di malam hari.</p>
+                    <button class="btn open-popup" data-target="#popup-macan">Baca Selengkapnya</button>
+                </div>
+            </div>
+
+            <!-- Tota'an Doro -->
+            <div class="budaya-card">
+                <div class="card-img">
+                    <img src="image/doro.jpg" alt="Tota'an Doro">
+                </div>
+                <div class="card-body">
+                    <h3>Tota'an Doro</h3>
+                    <p>Tradisi ini berupa pelepasan ratusan hingga ribuan burung merpati (doro) secara bersama-sama
+                        oleh para pecinta merpati sebagai ajang silaturahmi.</p>
+                    <button class="btn open-popup" data-target="#popup-totaan">Baca Selengkapnya</button>
+                </div>
+            </div>
+
+            <!-- Jaran Kencak -->
+            <div class="budaya-card">
+                <div class="card-img">
+                    <img src="image/jaran.png" alt="Jaran Kencak">
+                </div>
+                <div class="card-body">
+                    <h3>Jaran Kencak</h3>
+                    <p>Kesenian tradisional "kuda menari" yang menampilkan seekor kuda terlatih
+                        menari mengikuti irama musik tradisional dengan hiasan atau busana khas.</p>
+                    <button class="btn open-popup" data-target="#popup-jaran">Baca Selengkapnya</button>
+                </div>
+            </div>
+        </div>
+     </section>
+
+     <!-- Popup 1: JFC -->
+    <div class="popup" id="popup-jfc">
+        <div class="overlay"></div>
+        <div class="popup-content">
+            <img src="image/jfc2026.jpg" alt="JFC">
+            <h3>Jember Fashion Carnaval</h3>
+            <p>JFC atau Jember Fashion Carnaval adalah sebuah event karnaval busana tahunan bertaraf internasional yang diselenggarakan di Kabupaten Jember, Jawa Timur.
+            Digagas oleh almarhum Dynand Fariz sejak tahun 2003, JFC menampilkan parade kostum megah bertema budaya Nusantara dan dunia yang diperagakan di catwalk jalanan. 
+            Sebagai salah satu pelopor karnaval kontemporer di Indonesia, ajang ini telah meraih reputasi global dan diakui sebagai salah satu karnaval busana terbesar di dunia.</p>
+            <button class="close-btn">Tutup</button>
+        </div>
+    </div>
+
+    <!-- Popup 2: Tari Lahbako -->
+    <div class="popup" id="popup-lahbako">
+        <div class="overlay"></div>
+        <div class="popup-content">
+            <img src="image/tari lahbako.jpeg" alt="Tari Lahbako">
+            <h3>Tari Lahbako</h3>
+            <p>Tari Lahbako merupakan representasi budaya lokal yang terinspirasi dari aktivitas masyarakat agraris,
+                khususnya para perempuan petani tembakau. Sebagai salah satu komoditas unggulan daerah, tembakau memiliki nilai historis 
+                dan ekonomi yang tinggi di Kabupaten Jember. Melalui Tari Lahbako, gambaran tentang proses pengolahan tembakau, mulai dari pemetikan,
+                penjemuran, hingga pengemasan disajikan dalam bentuk gerakan tari yang lembut, dinamis, dan berkarakter.</p>
+            <button class="close-btn">Tutup</button>
+        </div>
+    </div>
+
+    <!-- Popup 3: Larung Sesaji -->
+    <div class="popup" id="popup-larungsesaji">
+        <div class="overlay"></div>
+        <div class="popup-content">
+            <img src="image/larung sesaji.jpg" alt="Larung Sesaji">
+            <h3>Larung Sesaji Puger</h3>
+            <p>Larung Sesaji atau Petik Laut Puger adalah ritual tahunan nelayan di Puger, Jember sebagai ungkapan syukur dan doa keselamatan.
+                Berpusat di Pantai Pancer setiap bulan Suro/Muharram, acara ini melarung Jolen (miniatur perahu berisi kepala hewan dan hasil bumi) 
+                ke Samudra Hindia setelah diarak dalam kirab budaya. Tradisi ini menjadi salah satu daya tarik wisata budaya utama di Jember.</p>
+            <button class="close-btn">Tutup</button>
+        </div>
+    </div>
+    
+    <!-- Popup 4: Can-Macanan Kadduk -->
+    <div class="popup" id="popup-macan">
+        <div class="overlay"></div>
+        <div class="popup-content">
+            <img src="image/macan.jpg" alt="Can-Macanan Kadduk">
+            <h3>Can-Macanan Kadduk</h3>
+            <p>Can-Macanan Kadduk adalah seni budaya Pandhalungan khas Kabupaten Jember yang mempertontonkan macan-macanan dari karung goni di malam hari.
+                Can-macanan berarti harimau gadungan dan Kadduk berarti karung. Karung disulam dengan tali rafia membentuk macan besar yang mengerikan,
+                sementara bagian kepalanya dibuat dari kayu berukir yang dipadukan dengan cat atau kulit agar tampak garang.
+                Dahulu, kesenian ini bermula dari alat pengusir hama dan pencuri di area persawahan, namun kini berkembang menjadi hiburan rakyat yang selalu hadir memeriahkan hajatan, selamatan desa, hingga festival budaya di Jember.</p>
+            <button class="close-btn">Tutup</button>
+        </div>
+    </div>
+
+    <!-- Popup 5: Tota'an Doro -->
+    <div class="popup" id="popup-totaan">
+        <div class="overlay"></div>
+        <div class="popup-content">
+            <img src="image/doro.jpg" alt="Tota'an Doro">
+            <h3>Tota'an Doro</h3>
+            <p>Tota'an Doro adalah tradisi unik dari Kabupaten Jember, Jawa Timur, berupa pelepasan ratusan hingga ribuan burung merpati (doro) secara serentak oleh warga dan komunitas pecinta merpati.
+                Berawal di Kecamatan Semboro pada sekitar tahun 1960-an, nama tradisi ini memadukan kata bahasa Madura tota'an (menuangkan/mengeluarkan) dan kata bahasa Jawa doro (merpati) sebagai wujud
+                akulturasi budaya Pandalungan. Dalam pelaksanaannya, warga berkumpul untuk mempererat silaturahmi, makan bersama, dan melepas burung-burung merpati mereka yang telah dihias agar terbang bersama
+                lalu kembali ke kandang masing-masing sebagai simbol perdamaian, kesetiaan, dan kebersamaan tanpa unsur perlombaan maupun taruhan.</p>
+            <button class="close-btn">Tutup</button>
+        </div>
+    </div>
+
+    <!-- Popup 6: Jaran Kencak -->
+    <div class="popup" id="popup-jaran">
+        <div class="overlay"></div>
+        <div class="popup-content">
+            <img src="image/jaran.png" alt="Jaran Kencak">
+            <h3>Jaran Kencak</h3>
+            <p>Sebuah tarian yang unik yang dapat ditemukan di Jember. Saat ini, seni kuda menari tidak hanya digunakan untuk pesta-pesta tetapi juga untuk karnaval dan festival.
+                Dengan kata lain, seni kuda menari telah menjadi obyek wisata di Jember.Salah satu warisan budaya dan seni di masyarakat Jember adalah jaran kencak (kuda menari).
+                Bagi masyarakat desa Jember bagian selatan mempunyai kegemaran bilamana mempunyai hajat akan menggelar jaran kencak untuk menghibur para tamu yang diundang.
+                Kuda atau jaran kencak (bhs Jawa) yang dipakai bukan sembarang kuda, namun kuda jenis ini adalah kuda yang senang menari dengan mengikuti irama musik tradisional yang ditabuh oleh pengiringnya.
+                Untuk melengkapi keunikan dan lebih menarik maka kudakuda itu dihias sedemikian rupa.</p>
+            <button class="close-btn">Tutup</button>
+        </div>
+    </div>
+    <!-- Link to Js-->
+    <script src="main.js"></script>
+  
+
+</body>
+
+
+</html>

@@ -3,78 +3,323 @@
 <html lang="en">
 <head>
     
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kuliner</title>
 
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Box Icons -->
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/filled/boxicons-filled.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Yeseva+One&display=swap" rel="stylesheet">
 </head>
 
-<body class="Background">
+<body>
 
-    <div class="box"> 
-        <nav class="navbar">
-            <a class="logo Abril-Fatface" href="home.html">Jember</a>
-            <a class="nav-link" href="wisata.html">Wisata</a>
-            <a class="nav-link" href="kuliner.html">Kuliner</a>
-            <a class="nav-link" href="budayaEvent.html">Budaya dan Event</a>
-            <a class="nav-link" href="musik.html">Musik</a>
-        </nav>
+    <!-- Navbar -->
+     <header>
+        <a href="home.html" class="logo"><i class = 'bx bx-leaf-alt'></i> Jember</a>
 
-        <!-- Prol Tape -->
-        <div class="rectangle">
-            <h1 class="yeseva-one-regular" style="font-size: 20px; margin-top: 10px; color: #6c7a62;">Prol Tape</h1>
-            <div class="photo">
-                <img src="image/prol tape.jpg" alt="Prol Tape">
-            </div>
-            <p class="description poppins-regular">
-                Kue prol tape merupakan salah satu kuliner khas Jember. Terbuat dari bahan dasar singkong yang difermentasi,
-                kue ini menyuguhkan perpaduan manis, sedikit asam, dan gurih yang khas.
-            </p>
-        </div>
-        
-        <!-- Suwar-suwir -->
-        <div class="rectangle" style="left: 37%;">
-            <h1 class="yeseva-one-regular" style="font-size: 20px; margin-top: 10px; color: #6c7a62;">Suwar-Suwir</h1>
-            <div class="photo">
-                <img src="image/suwar suwir.jpg" alt="Suwar-Suwir">
-            </div>
-            <p class="description poppins-regular">
-                Suwar-suwir merupakan makanan ringan (camilan) yang berasal dari Jember.
-                Suwar-suwir terbuat dari tape (fermentasi dari singkong) yang diolah hingga menjadi makanan ringan.
-            </p>
-        </div>
+        <!-- Navbar List -->
+        <ul class="navbar">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="wisata.html">Wisata</a></li>
+            <li><a href="kuliner.html" class="active">Kuliner</a></li>
+            <li><a href="budaya.html">Budaya</a></li>
+            <li><a href="musik.html">Musik</a></li>
+        </ul>
 
-        <!-- Pecel Gudeg -->
-        <div class="rectangle" style="left: 62%;">
-            <h1 class="yeseva-one-regular" style="font-size: 20px; margin-top: 10px; color: #6c7a62;">Pecel Gudeg</h1>
-            <div class="photo">
-                <img src="image/pecel gudeg.jpg" alt="Pecel Gudeg">
-            </div>
-            <p class="description poppins-regular">
-                Makanan ini adalah perpaduan unik antara dua kuliner khas, yaitu gudeg yang berasal dari Yogyakarta/Jawa Tengah (nangka muda manis)
-                dan pecel yang khas dengan bumbu kacang pedas gurih ala Jawa Timur.
-                Salah satu warung legendaris yang mempopulerkan hidangan ini di Jember adalah Warung Nasi Gudeg Lumintu.
-            </p>
-        </div>
+        <button id="theme-toggle">
+            <i class="bx bx-moon"></i>
+        </button>
+     </header>
 
-        <!-- Wedang Cor -->
-        <div class="rectangle" style="left: 87%;">
-            <h1 class="yeseva-one-regular" style="font-size: 18px; margin-top: 10px; color: #6c7a62; text-align: center;">Wedang Cor</h1>
-            <div class="photo">
-                <img src="image/wedang cor.jpg" alt="Wedang Cor">
+     <section class="kuliner">
+        <div class="kuliner-container">
+
+            <!-- Kartu Suwar-Suwir -->
+            <div class="kuliner-card">
+                <div class="card-img">
+                    <img src="image/suwarsuwir.jpg" alt="Suwar-Suwir">
+                    <button class="like-btn"><i class='bx bx-heart'></i></button>
+                </div>
+                <div class="card-body">
+                    <h3>Suwar-Suwir</h3>
+                    <p>Camilan manis bertekstur padat yang terbuat dari olahan fermentasi tape singkong dan gula, dipotong kecil memanjang menyerupai permen dodol berwarna-warni.</p>
+                    <button class="btn open-popup" data-target="#popup-suwarsuwir">Baca Selengkapnya</button>
+                </div>
             </div>
-            <p class="description poppins-regular">
-                Wedang cor adalah minuman tradisional khas Jember yang namanya terdengar cukup unik
-                — cor berasal dari bahasa Jawa yang berarti tuang atau siram.
-                Minuman tradisional ini terbuat dari campuran air jahe panas, tape ketan, dan susu kental manis.
-            </p>
+             
+            <!-- Kartu Prol Tape -->
+            <div class="kuliner-card">
+                <div class="card-img">
+                    <img src="image/prol tape.jpg" alt="Prol Tape">
+                    <button class="like-btn"><i class='bx bx-heart'></i></button>
+                </div>
+                <div class="card-body">
+                    <h3>Prol Tape</h3>
+                    <p>Kue bolu panggang padat namun lembut khas Jember berbahan dasar tape singkong, menawarkan perpaduan rasa manis, gurih, dan sedikit asam.</p>
+                    <button class="btn open-popup" data-target="#popup-proltape">Baca Selengkapnya</button>
+                </div>
+            </div>
+             
+            <!-- Kartu Wedang Cor -->
+            <div class="kuliner-card">
+                <div class="card-img">
+                    <img src="image/wedangcor.jpg" alt="Wedang Cor">
+                    <button class="like-btn"><i class='bx bx-heart'></i></button>
+                </div>
+                <div class="card-body">
+                    <h3>Wedang Cor</h3>
+                    <p>Wedang cor adalah minuman tradisional hangat khas Kabupaten Jember, Jawa Timur, yang diracik dari perpaduan air rebusan jahe, tape ketan, dan susu.</p>
+                    <button class="btn open-popup" data-target="#popup-wedangcor">Baca Selengkapnya</button>
+                </div>
+            </div>
+
+            <!-- Kartu Lumintu -->
+            <div class="kuliner-card">
+                <div class="card-img">
+                    <img src="image/gudeg.jpg" alt="Gudeg Lumintu">
+                    <button class="like-btn"><i class='bx bx-heart'></i></button>
+                </div>
+                <div class="card-body">
+                    <h3>Gudeg Lumintu</h3>
+                    <p>Kuliner legendaris Jember di Warung Lumintu yang memadukan manis-gurihnya gudeg nangka muda khas Jawa Tengah dengan pedas-gurihnya sambal pecel khas Jawa Timur.</p>
+                    <button class="btn open-popup" data-target="#popup-gudeglumintu">Baca Selengkapnya</button>
+                </div>
+            </div>
+
+            <!-- Nasi Langgi -->
+            <div class="kuliner-card">
+                <div class="card-img">
+                    <img src="image/nasilanggi.jpg" alt="Nasi Langgi">
+                    <button class="like-btn"><i class='bx bx-heart'></i></button>
+                </div>
+                <div class="card-body">
+                    <h3>Nasi Langgi</h3>
+                    <p>Sajian nasi gurih berempah khas budaya Pandalungan Jember yang dihidangkan lengkap bersama aneka lauk tradisional seperti daging, abon, telur, kering tempe, dan kentang balado.</p>
+                    <button class="btn open-popup" data-target="#popup-nasilanggi">Baca Selengkapnya</button>
+                </div>
+            </div>
+
+            <!-- Nasi Pecel Garahan -->
+            <div class="kuliner-card">
+                <div class="card-img">
+                    <img src="image/pecelgarahan.webp" alt="Nasi Pecel Garahan">
+                    <button class="like-btn"><i class='bx bx-heart'></i></button>
+                </div>
+                <div class="card-body">
+                    <h3>Nasi Pecel Garahan</h3>
+                    <p>Nasi pecel legendaris asal kawasan Stasiun Garahan, Jember, yang disajikan dalam pincuk daun pisang.</p>
+                    <button class="btn open-popup" data-target="#popup-pecelgarahan">Baca Selengkapnya</button>
+                </div>
+            </div>
         </div>
-                    
+     </section>
+
+     <!-- Popup 1: Suwar-Suwir -->
+    <div class="popup" id="popup-suwarsuwir">
+        <div class="overlay"></div>
+        <div class="popup-content">
+            <img src="image/suwarsuwir.jpg" alt="Suwar-Suwir">
+            <h3>Suwar-Suwir</h3>
+            <p>Suwar-suwir merupakan kudapan ikonik asal Kabupaten Jember yang sudah ada sejak era kolonial Belanda dan menjadi buah tangan favorit wisatawan.
+                Makanan ini dibuat dari tape singkong pilihan yang dimasak bersama gula selama berjam-jam hingga mengeras dan menghasilkan tekstur yang lebih padat dibandingkan dodol.
+                Awalnya hanya hadir dengan rasa orisinal atau sirsak, kini suwar-suwir dikreasikan dalam beragam rasa buah dan cokelat yang menggugah selera</p>
+            
+            <h4 class="place-title">TEMPAT MEMBELI</h4>
+            <ul class="place-list">
+                <li>
+                    <a href="https://maps.app.goo.gl/ra57jJ42eh8Jq9jG9" target="_blank">
+                        <i class="bx bx-location"></i>
+                        <div class="place-text">
+                            <strong>Primadona Oleh-Oleh</strong>
+                            <span>Jl. Trunojoyo No.137, Kec. Kaliwates, Kabupaten Jember</span>
+                        </div>
+                        <i class="bx bx-arrow-out-up-right-stroke-square"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://maps.app.goo.gl/zCAofvthEg7Zii9NA" target="_blank">
+                        <i class="bx bx-location"></i>
+                        <div class="place-text">
+                            <strong>Sari Madu</strong>
+                            <span>Jl. Gajah Mada No.155, Kec. Kaliwates, Kabupaten Jember</span>
+                        </div>
+                        <i class="bx bx-arrow-out-up-right-stroke-square"></i>
+                    </a>
+                </li>
+            </ul>
+
+            <button class="close-btn">Tutup</button>
+        </div>
     </div>
+
+    <!-- Popup 2: Prol Tape -->
+    <div class="popup" id="popup-proltape">
+        <div class="overlay"></div>
+        <div class="popup-content">
+            <img src="image/prol tape.jpg" alt="Prol Tape">
+            <h3>Prol Tape</h3>
+            <p>Prol tape adalah kue panggang yang memadukan tape singkong berkualitas dengan tepung terigu, telur, susu, dan mentega.
+                Kue ini memiliki tekstur yang unik—padat dan agak "beremah" (prol) saat digigit, tetapi tetap terasa lembut dan lumer di mulut.
+                Perpaduan cita rasa manis legit dari adonan kue dan sensasi asam manis khas fermentasi tape membuatnya digemari berbagai kalangan,
+                terutama dengan tambahan topping modern seperti keju, kismis, dan cokelat.</p>
+            
+            <span class="place-title">TEMPAT MEMBELI</span>
+            <ul class="place-list">
+                <li>
+                    <a href="https://maps.app.goo.gl/ra57jJ42eh8Jq9jG9" target="_blank">
+                        <i class="bx bx-location"></i>
+                        <div class="place-text">
+                            <strong>Primadona Oleh-Oleh</strong>
+                            <span>Jl. Trunojoyo No.137, Kec. Kaliwates, Kabupaten Jember</span>
+                        </div>
+                        <i class="bx bx-arrow-out-up-right-stroke-square"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://maps.app.goo.gl/zCAofvthEg7Zii9NA" target="_blank">
+                        <i class="bx bx-location"></i>
+                        <div class="place-text">
+                            <strong>Sari Madu</strong>
+                            <span>Jl. Gajah Mada No.155, Kec. Kaliwates, Kabupaten Jember</span>
+                        </div>
+                        <i class="bx bx-arrow-out-up-right-stroke-square"></i>
+                    </a>
+                </li>
+            </ul>
+
+            <button class="close-btn">Tutup</button>
+        </div>
+    </div>
+
+    <!-- Popup 3: Wedang Cor -->
+    <div class="popup" id="popup-wedangcor">
+        <div class="overlay"></div>
+        <div class="popup-content">
+            <img src="image/wedangcor.jpg" alt="Wedang Cor">
+            <h3>Wedang Cor</h3>
+            <p>Wedang cor adalah minuman tradisional hangat khas Kabupaten Jember, Jawa Timur, yang diracik dari perpaduan
+                air rebusan jahe, tape ketan, dan susu kental manis. Nama "cor" yang unik berasal dari cara pembuatannya yang diaduk
+                dengan cepat dan bertenaga menyerupai orang mengaduk adonan semen, serta menghasilkan tekstur campuran yang tampak pekat.</p>
+            
+            <h4 class="place-title">TEMPAT MEMBELI</h4>
+            <ul class="place-list">
+                <li>
+                    <a href="https://maps.app.goo.gl/B8pz3x75ggVNdv8g9" target="_blank">
+                        <i class="bx bx-location"></i>
+                        <div class="place-text">
+                            <strong>Wedang Cor "Mbah As"</strong>
+                            <span>Jl. Singosari, Kec. Sumbersari, Kabupaten Jember</span>
+                        </div>
+                        <i class="bx bx-arrow-out-up-right-stroke-square"></i>
+                    </a>
+                </li>
+            </ul>
+            
+            <button class="close-btn">Tutup</button>
+        </div>
+    </div>
+    
+    <!-- Popup 4: Gudeg Lumintu -->
+    <div class="popup" id="popup-gudeglumintu">
+        <div class="overlay"></div>
+        <div class="popup-content">
+            <img src="image/gudeg.jpg" alt="Gudeg Lumintu">
+            <h3>Gudeg Lumintu</h3>
+            <p>Gudeg Lumintu adalah sajian kuliner fusion legendaris di Jember yang telah bertahan lintas generasi.
+                Hidangan ini menyatukan dua tradisi kuliner Nusantara dalam satu piring: sayur nangka muda (gudeg) yang dimasak gurih dan tidak terlalu manis,
+                disajikan berdampingan dengan sayuran rebus serta siraman bumbu pecel kacang yang medok.
+                Dilengkapi dengan rempeyek kacang yang renyah serta pilihan lauk pendamping.</p>
+            
+            <h4 class="place-title">TEMPAT MEMBELI</h4>
+            <ul class="place-list">
+                <li>
+                    <a href="https://maps.app.goo.gl/baGTygon1ugiZNnaA" target="_blank">
+                        <i class="bx bx-location"></i>
+                        <div class="place-text">
+                            <strong>Gudeg Lumintu</strong>
+                            <span>Jl. Kerta Negara No.33, Jember Kidul, Kec. Kaliwates, Kabupaten Jember</span>
+                        </div>
+                        <i class="bx bx-arrow-out-up-right-stroke-square"></i>
+                    </a>
+                </li>
+            </ul>
+
+            <button class="close-btn">Tutup</button>
+        </div>
+    </div>
+
+    <!-- Popup 5: Nasi Langgi -->
+    <div class="popup" id="popup-nasilanggi">
+        <div class="overlay"></div>
+        <div class="popup-content">
+            <img src="image/nasilanggi.jpg" alt="Nasi Langgi">
+            <h3>Nasi Langgi</h3>
+            <p>Nasi Langgi khas Jember merupakan representasi kekayaan dapur masyarakat Pandalungan yang dulu kerap dihidangkan untuk jamuan istimewa.
+                Hidangan ini menggunakan nasi yang dimasak dengan santan dan rempah-rempah pilihan sehingga beraroma harum dan gurih.
+                Dalam satu piring, nasi gurih tersebut disajikan dengan komposisi lauk pauk yang meriah.</p>
+            
+                <h4 class="place-title">TEMPAT MEMBELI</h4>
+            <ul class="place-list">
+                <li>
+                    <a href="https://maps.app.goo.gl/eoMEWcFFi22f6hP28" target="_blank">
+                        <i class="bx bx-location"></i>
+                        <div class="place-text">
+                            <strong>Depot Jawa Timur</strong>
+                            <span>Jl. Gatot Subroto No.8, Kec. Kaliwates, Kabupaten Jember</span>
+                        </div>
+                        <i class="bx bx-arrow-out-up-right-stroke-square"></i>
+                    </a>
+                </li>
+            </ul>
+
+            <button class="close-btn">Tutup</button>
+        </div>
+    </div>
+
+    <!-- Popup 6: Nasi Pecel Garahan -->
+    <div class="popup" id="popup-pecelgarahan">
+        <div class="overlay"></div>
+        <div class="popup-content">
+            <img src="image/pecelgarahan.webp" alt="Nasi Pecel Garahan">
+            <h3>Nasi Pecel Garahan</h3>
+            <p>Nasi Pecel Pincuk Garahan merupakan kuliner tradisional bersejarah dari Desa Garahan, Kecamatan Silo,
+                yang dulunya dijajakan langsung kepada penumpang kereta api saat berhenti di Stasiun Garahan.
+                Ciri khas utamanya terletak pada penyajiannya yang menggunakan pincuk daun pisang alami serta racikan sambal kacang otentik dengan aroma sangrai dan daun jeruk yang kuat. </p>
+
+            <h4 class="place-title">TEMPAT MEMBELI</h4>
+            <ul class="place-list">
+                <li>
+                    <a href="https://maps.app.goo.gl/Rp7Dbgon55KeqU2BA" target="_blank">
+                        <i class="bx bx-location"></i>
+                        <div class="place-text">
+                            <strong>Warung Pecel Bu Ida</strong>
+                            <span>QVGW+383, Krajan, Garahan, Kec. Silo, Kabupaten Jember, Jawa Timur 68184</span>
+                        </div>
+                        <i class="bx bx-arrow-out-up-right-stroke-square"></i>
+                    </a>
+                </li>
+            </ul>
+            <button class="close-btn">Tutup</button>
+        </div>
+    </div>
+
+
+    <!-- Link to Js-->
+    <script src="main.js"></script>
+
+
+        
 
 </body>
 

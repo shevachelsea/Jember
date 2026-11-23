@@ -2,48 +2,167 @@
 <html lang="en">
 <head>
     
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
 
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Box Icons -->
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Yeseva+One&display=swap" rel="stylesheet">
+
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css"/>
 </head>
 
-<body class="Background">
+<body >
+    <!-- Navbar -->
+     <header>
 
-    <div class="box"> 
-        <nav class="navbar">
-            <a class="logo Abril-Fatface" href="home.html">Jember</a>
-            <a class="nav-link" href="wisata.html">Wisata</a>
-            <a class="nav-link" href="kuliner.html">Kuliner</a>
-            <a class="nav-link" href="budayaEvent.html">Budaya dan Event</a>
-            <a class="nav-link" href="musik.html">Musik</a>
+        <!-- Logo -->
+        <a href="home.html" class="logo"><i class = 'bx bx-leaf-alt'></i> Jember</a>
+
+        <!-- Navbar List -->
+        <ul class="navbar">
+            <li><a href="home.html" class="active">Home</a></li>
+            <li><a href="wisata.html">Wisata</a></li>
+            <li><a href="kuliner.html">Kuliner</a></li>
+            <li><a href="budaya.html">Budaya</a></li>
+            <li><a href="musik.html">Musik</a></li>
+        </ul>
+
+        <!-- Theme -->
+        <button id="theme-toggle">
+            <i class="bx bx-moon"></i>
+        </button>
+
+     </header>
+
+     <!-- Swiper -->
+      <section class="home swiper">
+        <div class="swiper-wrapper">
             
-        </nav>
-
-        <div class="home">
-            <div class="home-text">
-                <p class="poppins-regular" style="margin-top: 100px; font-size: 20px; color: #f2f1e8;">SELAMAT DATANG DI</p>
-
-                <div class ="yeseva-one-regular" style="font-size: 50px; margin-top: 10px; font-weight: 400; color: #f2f1e8;">
-                    Jember
+            <!-- Slide 1 -->
+            <div class="swiper-slide container">
+                <div class="home-text">
+                    <h1>Pesona Alam Jember</h1>
+                    <p>Jelajahi keindahan alam Jember, mulai dari pantai yang memukau hingga hamparan kebuh teh yang indah.</p>
+                    <a href="wisata.html" class="btn">Jelajahi Wisata<i class='bx bx-arrow-right-stroke'></i></a>
                 </div>
-
-                <p class="poppins-regular" style="font-size: 15px; color: #f2f1e8;">
-                    Temukan keindahan alam, kekayaan kuliner, musik, serta budaya unik dari Jember
-                </p>
-
-            <a class="home-button inter-uniquifier" href="wisata.html" style="font-size: 13px; color: #6c7a62;"><b>Selengkapnya →</b></a>
-
+                <img src="image/papuma.webp" alt="Papuma">          
+            </div>
+                
+            <!-- Slide 2 -->
+            <div class="swiper-slide container">
+                <div class="home-text">
+                    <h1>Semarak Karnaval Jember</h1>
+                    <p>Rasakan kemeriahan berbagai budaya dan festival yang menampilkan kreativitas serta keunikan Jember.</p>
+                    <a href="budaya.html" class="btn">Lihat Event<i class='bx bx-arrow-right-stroke'></i></a>
+                </div>
+                <img src="image/JFC.jpg" alt="JFC">          
             </div>
 
-            <div class="home-image" style="margin-top: 70px;"></div>
-                    
+            <!-- Slide 3 -->
+            <div class="swiper-slide container">
+                <div class="home-text">
+                    <h1>Cita Rasa Khas Jember</h1>
+                    <p>Temukan beragam kuliner khas Jember dengan cita rasa unik yang menggugah selera.</p>
+                    <a href="kuliner.html" class="btn">Jelajahi Kuliner<i class='bx bx-arrow-right-stroke'></i></a>
+                </div>
+                <img src="image/prol tape.jpg" alt="Prol Tape">          
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="swiper-slide container">
+                <div class="home-text">
+                    <h1>Keunikan Musik Jember</h1>
+                    <p>Jelajahi keunikan musik Jember yang memukau.</p>
+                    <a href="musik.html" class="btn">Lihat Musik<i class='bx bx-arrow-right-stroke'></i></a>
+                </div>
+                <img src="image/patrol.jpg" alt="Papuma">          
+            </div>
         </div>
-    </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </section>
+
+     <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
+
+     <!-- Link to Js-->
+    <script src="main.js"></script>
+
+    <section class="category">
+        <div class="category-container">
+
+            <!-- Category Wisata-->
+            <div class="category-item">
+                <img src="image/gunung gambir.jpg" alt="Wisata">
+                <div class="circle">
+                    <i class='bx bx-trees'></i>
+                </div>
+                <h3>Wisata</h3>
+                <p>Jelajahi keindahan alam Jember.</p>
+                <a href="wisata.html" class="category-btn"><i class='bx bx-arrow-right-stroke'></i></a>
+            </div>
+
+            <!-- Category Kuliner-->
+            <div class="category-item">
+                <img src="image/suwar suwir.jpg" alt="Budaya">
+                <div class="circle">
+                    <i class='bx bx-fork-knife'></i>
+                </div>
+                <h3>Kuliner</h3>
+                <p>Nikmati cita rasa khas Jember.</p>
+                <a href="kuliner.html" class="category-btn"><i class='bx bx-arrow-right-stroke'></i></a>
+            </div>
+
+            <!-- Category Budaya-->
+            <div class="category-item">
+                <img src="image/larung sesaji.jpg" alt="Musik">
+                <div class="circle">
+                    <i class='bx bx-magic-wand'></i>
+                </div>
+                <h3>Budaya</h3>
+                <p>Kenali kekayaan budaya Jember.</p>
+                <a href="budaya.html" class="category-btn"><i class='bx bx-arrow-right-stroke'></i></a>
+            </div>
+
+            <!-- Category Musik-->
+            <div class="category-item">
+                <img src="image/patrol.jpg" alt="Wisata">
+                <div class="circle">
+                    <i class='bx bx-piano-grand'></i>
+                </div>
+                <h3>Musik</h3>
+                <p>Jelajahi musik jember.</p>
+                <a href="musik.html" class="category-btn"><i class='bx bx-arrow-right-stroke'></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Jember -->
+    <section class="about" id="about">
+       <div class="square">
+         <div class="section-label">
+            <span>TENTANG JEMBER</span>
+        </div>
+        <p>
+            Jember dijuluki Kota Seribu Gumuk karena memiliki ribuan bukit kecil alami sisa letusan purba Gunung Raung.
+            Selain itu, kabupaten ini mendunia berkat tembakau cerutu berkualitas ekspor, ajang busana jalanan bergengsi Jember Fashion Carnaval (JFC),
+            serta keunikan budaya Pandhalungan yang memadukan tradisi Jawa dan Madura.
+        </p>
+       </div>
+    </section>
 
 </body>
 

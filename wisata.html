@@ -3,80 +3,247 @@
 <html lang="en">
 <head>
     
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wisata</title>
 
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Box Icons -->
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/filled/boxicons-filled.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Yeseva+One&display=swap" rel="stylesheet">
 
 </head>
 
-<body class="Background">
+<body>
 
-    <div class="box"> 
-        <nav class="navbar">
-            <a class="logo Abril-Fatface" href="home.html">Jember</a>
-            <a class="nav-link" href="wisata.html">Wisata</a>
-            <a class="nav-link" href="kuliner.html">Kuliner</a>
-            <a class="nav-link" href="budayaEvent.html">Budaya dan Event</a>
-            <a class="nav-link" href="musik.html">Musik</a>
-        </nav>
+    <!-- Navbar -->
+     <header>
+        <a href="home.html" class="logo"><i class = 'bx bx-leaf-alt'></i> Jember</a>
 
-        <!-- Papuma -->
-        <div class="rectangle">
-            <h1 class="yeseva-one-regular" style="font-size: 20px; margin-top: 10px; color: #6c7a62;">Pantai Papuma</h1>
-            <div class="photo">
-                <img src="image/papuma.webp" alt="Pantai Papuma">
-            </div>
-            <p class="description poppins-regular">
-                Pantai papuma berada di Desa Lojejer, Kecamatan Wuluhan, Kabupaten Jember.
-                Keindahan pasir putih Malikan ini cukup eksotis dan mampu menarik perhatian
-                wisatawan lokal hingga mancanegara untuk datang kesana.
+        <!-- Navbar List -->
+        <ul class="navbar">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="wisata.html" class="active">Wisata</a></li>
+            <li><a href="kuliner.html">Kuliner</a></li>
+            <li><a href="budaya.html">Budaya</a></li>
+            <li><a href="musik.html">Musik</a></li>
+        </ul>
+        <button id="theme-toggle">
+            <i class="bx bx-moon"></i>
+        </button>
+     </header>
+
+     <section class="wisata">
+        <div class="peta-container">
+            <img src="image/map jember.jpg" alt="Map Jember">
+
+            <!-- Pin 1 -->
+             <button class="open-popup pin pin1" data-target="#popup-gambir">
+                <i class='bxf bx-location'></i>
+            </button>
+
+            <!-- Pin 2 -->
+             <button class="open-popup pin pin2" data-target="#popup-tancak">
+                <i class='bxf bx-location'></i>
+            </button>
+
+            <!-- Pin 3 -->
+             <button class="open-popup pin pin3" data-target="#popup-rembangan">
+                <i class='bxf bx-location'></i>
+            </button>
+
+            <!-- Pin 4 -->
+             <button class="open-popup pin pin4" data-target="#popup-puslit">
+                <i class='bxf bx-location'></i>
+            </button>
+
+            <!-- Pin 5 -->
+             <button class="open-popup pin pin5" data-target="#popup-papuma">
+                <i class='bxf bx-location'></i>
+            </button>
+        </div>
+     </section>
+
+      <!-- POPUP 1: GAMBIR -->
+    <div class="popup" id="popup-gambir">
+
+        <div class="overlay"></div>
+
+        <div class="popup-content">
+
+            <img src="image/gunung gambir.jpg" alt="Gunung Gambir">
+
+            <h3>Gunung Gambir</h3>
+
+            <p>
+                Destinasi agrowisata perkebunan teh bersejarah peninggalan era Belanda yang menawarkan hamparan kebun hijau,
+                udara sejuk pegunungan, dan panorama matahari terbit. 
             </p>
+
+            <ul class="place-list">
+                <li>
+                    <a href="https://share.google/IX9FQxyjjEEeOI1VI" target="_blank">
+                        <i class="bx bx-location"></i>
+                        <div class="place-text">
+                            <span>Lanasan, Gelang, Sumberbaru, Kabupaten Jember</span>
+                        </div>
+                        <i class="bx bx-arrow-out-up-right-stroke-square"></i>
+                    </a>
+                </li>
+            </ul>
+
+            <button class="close-btn">Tutup</button>
+
         </div>
 
-        <!-- Gunung Gambir -->
-        <div class="rectangle" style="left: 37%;">
-            <h1 class="yeseva-one-regular" style="font-size: 20px; margin-top: 10px; color: #6c7a62;">Gunung Gambir</h1>
-            <div class="photo">
-                <img src="image/gunung gambir.jpg" alt="Gunung Gambir">
-            </div>
-            <p class="description poppins-regular">
-                Gunung Gambir adalah sebuah kebun teh yang berada di Jember, tepatnya berada di lereng Gunung Argopuro.
-                Selain meneikmati panorama alam, pengunjung juga dapat mengenal proses budidaya tanaman teh.
-            </p>
-        </div>
-
-        <!-- Air Terjun Tancak -->
-        <div class="rectangle" style="left: 62%;">
-            <h1 class="yeseva-one-regular" style="font-size: 20px; margin-top: 10px; color: #6c7a62;">Air Terjun Tancak</h1>
-            <div class="photo">
-                <img src="image/tancak.jpg" alt="Air Terjun Tancak">
-            </div>
-            <p class="description poppins-regular">
-                Air Terjun Tancak adalah air terjun tertinggi di Kabupaten Jember dengan ketinggian 82 meter.
-                Berada di ketinggian 900 mdpl pada lereng Pegunungan Argopuro, destinasi ini memadukan megahnya tebing batu,
-                derasnya debit air, dan hamparan kebun kopi yang asri dalam satu petualangan alam yang autentik.
-            </p>
-        </div>
-
-        <!-- Puslit -->
-        <div class="rectangle" style="left: 87%;">
-            <h1 class="yeseva-one-regular" style="font-size: 18px; margin-top: 10px; color: #6c7a62; text-align: center;">Pusat Penelitian Kopi dan Kakao</h1>
-            <div class="photo">
-                <img src="image/puslit.webp" alt="Pusat Penelitian Kopi dan Kakao">
-            </div>
-            <p class="description poppins-regular">
-                Puslitkoka Jember adalah pusat riset nasional sekaligus tempat wisata edukasi kopi dan cokelat.
-                Tempat ini berfungsi untuk menciptakan bibit unggul, menguji mutu ekspor, dan membuat mesin pengolahan,
-                sekaligus membuka area perkebunan agar masyarakat bisa belajar budidaya, melihat pabrik cokelat, dan membeli produk olahan asli.
-            </p>
-        </div>
-                    
     </div>
+
+    <!-- POPUP 2: TANCAK -->
+    <div class="popup" id="popup-tancak">
+
+        <div class="overlay"></div>
+
+        <div class="popup-content">
+
+            <img src="image/tancak.jpg" alt="Tancak">
+
+            <h3>Air Terjun Tancak</h3>
+
+            <p>
+                Air terjun setinggi sekitar 82 meter dengan aliran air jernih dan deras yang dapat
+                dicapai melalui jalur trekking melintasi perkebunan kopi dan hutan alami.
+            </p>
+
+            <ul class="place-list">
+                <li>
+                    <a href="https://maps.app.goo.gl/B4soGDdzxGVdATwJ6" target="_blank">
+                        <i class="bx bx-location"></i>
+                        <div class="place-text">
+                            <span>Area Pegunungan Argop, Suci, Kec. Panti, Kabupaten Jember</span>
+                        </div>
+                        <i class="bx bx-arrow-out-up-right-stroke-square"></i>
+                    </a>
+                </li>
+            </ul>
+
+
+            <button class="close-btn">Tutup</button>
+
+        </div>
+
+    </div>
+
+    <!-- POPUP 3: REMBANGAN -->
+    <div class="popup" id="popup-rembangan">
+
+        <div class="overlay"></div>
+
+        <div class="popup-content">
+
+            <img src="image/rembangan.jpg" alt="Puncak Rembangan">
+
+            <h3>Puncak Rembangan</h3>
+
+            <p>
+                Kawasan agrowisata dataran tinggi berudara sejuk yang menawarkan panorama alam dari ketinggian,
+                kolam renang pegunungan, kebun buah naga, serta area perkemahan.
+            </p>
+
+            <ul class="place-list">
+                <li>
+                    <a href="https://maps.app.goo.gl/9B9FGEqfvwk1k4Ys6" target="_blank">
+                        <i class="bx bx-location"></i>
+                        <div class="place-text">
+                            <span>Darungan, Kemuning Lor, Kec. Arjasa, Kabupaten Jember</span>
+                        </div>
+                        <i class="bx bx-arrow-out-up-right-stroke-square"></i>
+                    </a>
+                </li>
+            </ul>
+
+            <button class="close-btn">Tutup</button>
+
+        </div>
+
+    </div>
+
+    <!-- POPUP 4: PUSLIT -->
+    <div class="popup" id="popup-puslit">
+
+        <div class="overlay"></div>
+
+        <div class="popup-content">
+
+            <img src="image/puslit.webp" alt="Puslit">
+
+            <h3>Pusat Penelitian Kopi dan Kakao</h3>
+
+            <p>
+                Kawasan wisata edukasi dan riset yang mengajak pengunjung tur mengelilingi kebun serta mempelajari
+                proses pengolahan biji kopi dan kakao hingga menjadi produk siap konsumsi.
+            </p>
+
+            <ul class="place-list">
+                <li>
+                    <a href="https://maps.app.goo.gl/8r4MM95i2vRaKKuA8" target="_blank">
+                        <i class="bx bx-location"></i>
+                        <div class="place-text">
+                            <span>Jalan Jenggawa - Mumbulsari, Wonojati, Jenggawah, Gebang, Nogosari, Kec. Rambipuji, Kabupaten Jember</span>
+                        </div>
+                        <i class="bx bx-arrow-out-up-right-stroke-square"></i>
+                    </a>
+                </li>
+            </ul>
+
+            <button class="close-btn">Tutup</button>
+
+        </div>
+
+    </div>
+
+    <!-- POPUP 5: PAPUMA -->
+    <div class="popup" id="popup-papuma">
+
+        <div class="overlay"></div>
+
+        <div class="popup-content">
+
+            <img src="image/papuma.webp" alt="Papuma">
+
+            <h3>Pantai Papuma</h3>
+
+            <p>
+                Destinasi wisata bahari berpasir putih halus yang ikonik dengan gugusan batu karang
+                raksasa di tepi laut serta panorama matahari terbit dan terbenam yang memukau.
+            </p>
+
+            <ul class="place-list">
+                <li>
+                    <a href="https://maps.app.goo.gl/At9uhyzSHQM8vBja9" target="_blank">
+                        <i class="bx bx-location"></i>
+                        <div class="place-text">
+                            <span>Desa Lojejer, Kecamatan Wuluhan, Kabupaten Jember</span>
+                        </div>
+                        <i class="bx bx-arrow-out-up-right-stroke-square"></i>
+                    </a>
+                </li>
+            </ul>
+
+            <button class="close-btn">Tutup</button>
+
+        </div>
+
+    </div>
+
+    <!-- JavaScript -->
+    <script src="main.js"></script>
 
 </body>
 

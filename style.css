@@ -1,57 +1,9 @@
-html, body {
+/* ========= Semua Halaman ========= */
+
+* {
     margin: 0;
     padding: 0;
-    width: 100%;
-    min-height: 100vh;
-}
-
-.box{
-    margin: 0 10% 40px;
-}
-
-.Background{
-    background: linear-gradient(
-        to bottom,
-        #f2f1e8 0,
-        #f2f1e8 80px,
-        #6c7a62 80px,
-        #6c7a62 100%
-    );
-
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 100vh;
-}
-
-.navbar{
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    width: 100%;
-    min-height: 60px;
-    margin-left: 10%;
-}
-
-.logo, .nav-link{
-    color: #6c7a62;
-}
-
-.logo{
-    font-size: 30px;
-}
-
-.nav-link{
-    font-family: "Poppins", sans-serif;
-    font-size: 16px;
-}
-
-.nav-link:hover{
-    text-decoration: underline;
-}
-
-a{
-    text-decoration: none;
-    color: inherit;
+    box-sizing: border-box; 
 }
 
 /* Font */
@@ -90,319 +42,877 @@ a{
   font-style: normal;
 }
 
-/* Home */
-.home {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 80px;
-    margin-top: 60px;
+:root{
+    --dark-green: #263B35;
+    --olive-green: #6C7A62;
+    --cream: #F2F0E6;
+    --beige: #E5D9B9;
+    --gold: #B8A27A;
+    --charcoal: #30332C;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    --dark-green: #F2F0E6;
+    --olive-green: #A8B59A;
+    --cream: #263B35;
+    --beige: #3D5148;
+    --gold: #B8A27A;
+    --charcoal: #E5D9B9;
+}
+
+body.dark-mode header {
+    background: #263B35;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Tombol Light Dark */
+#theme-toggle {
+    margin-left: auto;
+    font-size: 22px;
+    color: var(--dark-green);
+    cursor: pointer;
+}
+
+section{
+    padding: 4.5rem 0 1.5rem;
+}
+
+img {
     width: 100%;
 }
 
-.home-text {
-    text-align: left;
-    width: 400px;
+body{
+    font-family: "Poppins", sans-serif;
+    color: var(--dark-green);
+    background: var(--cream);
 }
 
-.home-image{
-    border-radius: 999px;
-    background-size: cover; 
-    background-position: center; 
-    background-image: url('image/JFC.jpg');
-    width: 500px;
-    height: 300px;
-    background-repeat: no-repeat;
-    transform: rotate(6deg);
-    box-shadow: 0 0 40px 15px #FEF3E2;
+ul {
+    list-style: none;
 }
 
-.home-button{
-    display: flex;
+a {
+  text-decoration: none;
+}
+
+.btn{
+    padding: 0.6rem 1rem;
+    background: var(--dark-green);
+    color: var(--cream);
+    font-weight: 400;
+    border-radius: 5rem;
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
-    height: 40px;
-    width: 110px;
-    border-radius: 30px;
-    border: 2px solid #6f8068;
-    background-color: #f2f1e8;
-    margin-left: 5px;
-    margin-right: auto;
-    margin-top: 30px;
+    justify-content: space-between;
+    column-gap: 0.5rem;
 }
 
-/* Wisata dan Kuliner */
-.rectangle{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+button{
+    background: transparent;
+    border: 0;
+    outline: 0;
+}
+
+/* ========= Navbar =========  */
+
+header{
     position: fixed;
-    left: 12%;
-    top: 60%;
-    width: min(550px, 80vw);
-    height: 150px;
-    transform: translate(-50%, -50%);
-    border: 2px solid #f2f1e8;
-    border-radius: 10px;
-    background-color: #f2f1e8;
-    overflow: hidden;
-
-    width: 20%;
-    height:60%;
-}
-
-.photo{
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    width: 100%;
-    flex: 0 0 auto;
-    padding: 0 12px;
-    box-sizing: border-box;
+    align-items: center;
+    background: var(--cream);
+    box-shadow: 0 8px 11px rgba(14 55 54 / 15%);
+    padding: 1rem 5%;
+    transition: 0.3s;
 }
 
-.photo img{
+.logo{
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--dark-green);
+    column-gap: 0.5rem;
+    margin-right: 3rem;
+}
+
+.logo .bx{
+    font-size: 24px;
+    color: var(--dark-green);
+
+}
+
+.navbar{
+    display: flex;
+    column-gap: 0.5rem;
+}
+
+.navbar a{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--dark-green);
+    padding: 0.5rem 1rem;
+}
+
+.navbar a:hover,
+.navbar .active{
+    color: var(--dark-green);
+    background: var(--beige);
+    border-radius: 5rem;
+    transition: background 0.5s;
+}
+
+/* ========= Card & Popup (Budaya, Kuliner, Wisata) ========= */
+
+.card-img {
+    width: 100%;
+    height: 180px; 
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
     display: block;
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    margin-bottom: 8px;
 }
 
-.description{
-    width: 100%;
-    margin: 0;
-    padding: 0 16px 16px;
-    box-sizing: border-box;
-    color: #6c7a62;
-    font-size: 10px;
+.card-body {
+    padding: 1.2rem;
+    color: var(--dark-green);
+}
+
+.card-body h3 {
+    font-family: "Yeseva One", serif;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-body p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    color: var(--charcoal);
     text-align: justify;
 }
 
-/* Event dan Budaya */
-.jfc-image{
-    width: 80%;
-    height: 180px;
-    margin: 0 auto;
-    border-radius: 10px;
-    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
-
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2000;
+    display: none;
 }
 
-.jfc-image img{
+.popup.active {
     display: block;
+}
+
+.popup .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.popup .popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 420px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: var(--cream);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.popup .popup-content img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.popup .popup-content h3 {
+    margin-bottom: 10px;
+    font-family: "Yeseva One", serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--dark-green);
+}
+
+.popup .popup-content p {
+    margin-bottom: 20px;
+    font-size: 15px;
+    color: var(--charcoal);
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.popup .popup-content span {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--dark-green);
+}
+
+.popup .popup-content .close-btn {
+    padding: 8px 20px;
+    border: none;
+    background: var(--dark-green);
+    color: var(--cream);
+    font-size: 14px;
+    border-radius: 5rem;
+    cursor: pointer;
+}
+
+/* ========= PAGE HOME ========= */
+
+.container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container img{
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 30%;
-    border-radius: 10px;
+    z-index: 0;
 }
 
-.jfc-text{
-    margin-top: 10px;
-    margin-left: 10%;
-    margin-right: 10%;
-    color: #f2f1e8;
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.home {
+    width: 90%;
+    height: 380px;
+    margin: 100px auto 30px;
+    padding: 0;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.home-text{
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    padding: 0;
+    color: white;
+}
+
+.home-text h1{
+    font-family: "Abril Fatface", serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.home-text p{
+    font-size: 1rem;
+    color: white;
+    margin: 0.5rem 0 1rem;
+    max-width: 400px;
     text-align: justify;
 }
 
-.budaya-event .box{
-    margin-bottom: 60px;
+.about {
+    width: 90%;
+    margin: 2rem auto 2rem;
+    padding: 1rem 0 2rem;
 }
 
-.budaya-container {
+.section-label span {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    font-family: "Inter", sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--olive-green);
+    margin-bottom: 1rem;
+}
+
+.section-label span::after {
+    content: "";
+    width: 100px;
+    height: 1px;
+    background: var(--gold);
+}
+
+.about p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--charcoal);
+    text-align: justify;
+}
+
+.square {
+    position: static;
+    border-radius: 5px;
+    height: auto;
+    width: 100%;
+    background-color: var(--beige);
+}
+
+.category{
+    width: 90%;
+    margin: 2rem auto;
+    padding: 1rem 0;
+}
+
+.category-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.category-item{
+    position: relative;
+    height: 150px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.category-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.category-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s;
+}
+
+.category-item h3 {
+    position: absolute;
+    bottom: 50%;
+    left: 65px;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 600;
+    z-index: 2;
+}
+
+.category-item p {
+    position: absolute;
+    bottom: 30%;
+    left: 15px;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 400;
+    z-index: 2;
+}
+
+.category-item:hover img {
+    transform: scale(1.08);
+}
+
+.circle{
+    position: absolute;
+    bottom: 45%;
+    left: 15px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--beige);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.circle i{
+    font-size: 25px;
+    color: var(--dark-green);
+}
+
+.category-btn {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    width: 35px;
+    height: 35px;
+    background: var(--beige);
+    color: var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    transition: 0.3s;
+}
+
+.category-btn:hover {
+    background: var(--gold);
+    color: var(--beige);
+}
+
+
+/* ========= PAGE BUDAYA =========  */
+.budaya{
+    width: 90%;
+    margin: 100px auto 2rem;
+
+    padding: 1rem 0;
+}
+
+.budaya-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.budaya-card {
+    background: var(--beige);
+    border-radius: 12px;
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/* ========= PAGE KULINER ========= */
+.kuliner {
+    width: 90%;
+    margin: 100px auto 2rem;
+    padding: 1rem 0;
+}
+
+.kuliner-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+}
+
+.kuliner-card {
+    position: relative;
+    background: var(--beige);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ========= Tombol Like ========= */
+.like-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 50%;
+    background: var(--beige);
+    color: var(--dark-green);
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 5;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, background 0.3s ease, color 0.3s ease;
+}
+
+.like-btn:hover {
+    transform: scale(1.1);
+}
+
+.like-btn.liked {
+    background: var(--beige);
+    color: #e63946 !important;
+    transform: scale(1.2);
+}
+
+.kuliner-card .card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.kuliner-card .card-body .btn {
+    margin-top: auto;
+    align-self: flex-start;
+    border: none;
+    cursor: pointer;
+}
+
+.place-title {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: var(--olive-green);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.place-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;           
+    margin-bottom: 20px;
+}
+
+.place-list li {
+    margin-bottom: 8px;
+}
+
+.place-list li a {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 10px 12px;
+    background: var(--beige);
+    border-radius: 10px;
+    color: inherit;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.place-list li a:hover {
+    background: var(--gold);
+    transform: translateY(-2px);
+}
+
+.place-list li a > i:first-child {
+    font-size: 20px;
+    color: var(--olive-green);
+}
+
+.place-text {
+    flex: 1;
+}
+
+.place-text strong {
+    display: block;
+    font-size: 15px;
+    color: var(--dark-green);
+}
+
+.place-text span {
+    font-size: 13px;
+    color: var(--charcoal);
+}
+
+.kuliner-card[hidden] {
+    display: none;
+}
+
+
+/* ========= PAGE WISATA ========= */
+
+.wisata {
+    width: 90%;
+    margin: 100px auto 2rem;
+    padding: 0;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    gap: 40px;
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
 }
 
-.budaya-item{
+.peta-container {
+    position: relative;
     width: 100%;
+    max-width: 1190px;
 }
 
-.budaya-image{
-    width: 50%;         
-    height: auto;    
-    margin-top: 40px;   
-    border-radius: 10px
-}
-
-.budaya-image img{
-    display: block;
-    max-width: 100%;
-    height: auto;
-    border-radius: inherit;
-}
-
-.budaya-text{
-    color: #f2f1e8;
-    text-align: justify;
+.peta-container img {
     width: 100%;
-}
-
-/* Musik */
-.patrol-container {
-    width: 80%;
-    margin: 20px auto;
-}
-
-.patrol-container img {
+    height: auto; 
     display: block;
-    width: 40%;
-    height: auto;
-    margin: 0 auto;
-    border-radius: 10px;
 }
 
-.patrol-text {
-    color: #f2f1e8;
-    margin-top: 20px;
+/* Pin Lokasi */
+.pin {
+    position: absolute;
+    background: transparent;
+    color: #c83232;
+    border: none;
+    font-size: clamp(18px, 3vw, 30px);
+    cursor: pointer;
+    transform: translate(-50%, -100%);
+    transition: transform 0.3s ease;
+}
+
+.pin:hover {
+    transform: translate(-50%, -100%) scale(1.2);
+}
+
+/* Posisi pin */
+.pin1 { top: 20.5%; left: 36%; }   /* gambir */
+.pin2 { top: 34%;   left: 31%; }   /* tancak */
+.pin3 { top: 37%;   left: 53%; }   /* rembangan */
+.pin4 { top: 72.5%; left: 56%; }   /* puslit */
+.pin5 { top: 76%;   left: 41%; }   /* papuma */
+
+/* ========= PAGE MUSIK =========  */
+.musik {
+    width: 90%;
+    margin: 100px auto 30px;
+    padding: 1rem 0;
+
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    align-items: center;
+    gap: 2rem;
+}
+
+.musik-text h1 {
+    font-family: "Abril Fatface", serif;
+    font-size: 3rem;
+    color: var(--dark-green);
+    margin-bottom: 1rem;
+}
+
+.musik-text p {
+    color: var(--charcoal);
+    line-height: 1.7;
     text-align: justify;
+    margin-bottom: 1.5rem;
+    max-width: 450px;
+}
+
+.musik-video {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    background: var(--beige);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.musik-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+
+    background: var(--beige);
+    color: var(--dark-green);
+    font-size: 35px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.play-btn:hover {
+    background: var(--olive-green);
+    color: var(--cream);
+}
+
+/* Tentang Musik Patrol */
+
+.tentang-patrol {
+    width: 90%;
+    margin: 2rem auto;
+    padding: 1rem 0;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+}
+
+.patrol-img {
+    height: 280px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.patrol-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.patrol-text h2 {
+    font-family: "Yeseva One", serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.patrol-text p {
+    line-height: 1.7;
+    text-align: justify;
+    color: var(--charcoal);
 }
 
 
-/* RESPONSIVE UNTUK HP */
 
-@media screen and (max-width: 768px) {
+/* ========= RESPONSIVE ========= */
 
-    html, body {
-        width: 100%;
-        overflow-x: hidden;
+html, body { overflow-x: hidden; }
+
+@media (max-width: 992px) {
+    .budaya-container,
+    .kuliner-container {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .box {
-        margin: 0 5% 30px;
+    .category-container {
+        grid-template-columns: repeat(2, 1fr);
     }
+
+    .musik-text h1 { font-size: 2.5rem; }
+}
+
+@media (max-width: 768px) {
+
+    header {
+        flex-wrap: wrap;
+        padding: 0.7rem 4%;
+        row-gap: 0.4rem;
+    }
+
+    .logo { margin-right: 0; }
 
     .navbar {
-        width: 100%;
-        margin-left: 0;
-        gap: 10px 16px;
-        flex-wrap: wrap;
-        padding: 10px 0;
-        box-sizing: border-box;
-    }
-
-    .logo {
-        font-size: 26px;
-        width: 100%;
-    }
-
-    .nav-link {
-        font-size: 12px;
-    }
-
-    .home {
-        width: 100%;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0;
-        margin-top: 20px;
-    }
-
-    .home-text {
-        display: contents;
-    }
-
-    .home-text p:first-child {
-        order: 1;
-        margin-top: 20px !important;
-        font-size: 15px !important;
-    }
-
-    .home-text .yeseva-one-regular {
-        order: 2;
-        font-size: 40px !important;
-    }
-
-    .home-text p:nth-of-type(2) {
         order: 3;
-        font-size: 13px !important;
-        line-height: 1.7;
-    }
-
-        .home-image {
-        order: 4;
         width: 100%;
-        height: 210px;
-        margin-top: 25px !important;
-        box-sizing: border-box;
-        border-radius: 999px;
-        background-position: center;
-        box-shadow: 0 0 20px 5px #FEF3E2;
+        justify-content: space-between;
+        column-gap: 0;
     }
 
-    /* Tombol Selengkapnya (paling bawah, di bawah foto) */
-    .home-button {
-        order: 5;
-        margin-top: 25px;
-        margin-bottom: 20px;
+    .navbar li { flex: 1; text-align: center; }
+
+    .navbar a {
+        display: block;
+        font-size: 0.8rem;
+        padding: 0.4rem 0.2rem;
+        white-space: nowrap;
     }
 
-    /* Wisata dan Kuliner */
-    .rectangle {
+    .home,
+    .budaya,
+    .kuliner,
+    .wisata,
+    .musik {
+        margin-top: 120px;
+    }
+
+    /* HOME */
+    .home { height: 300px; }
+
+    .home-text { left: 6%; right: 6%; }
+
+    .home-text h1 { font-size: 1.7rem; margin-bottom: 0.5rem; }
+
+    .home-text p {
+        font-size: 0.9rem;
+        max-width: 100%;
+        margin: 0.3rem 0 0.8rem;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev { display: none; }
+
+    /* Tentang Jember */
+    .square {
         position: static;
-        transform: none;
-        width: 100%;
         height: auto;
-        margin: 20px auto;
-        box-sizing: border-box;
-    }
-
-    .description {
-        font-size: 12px;
-        line-height: 1.6;
-    }
-    
-    /* Budaya dan event */
-    .jfc-image {
-        width: 90%;
-        height: 160px;
-    }
-
-    .jfc-text {
-        margin-left: 5%;
-        margin-right: 5%;
-        font-size: 14px;
-        line-height: 1.7;
-    }
-
-    .budaya-container {
-        width: 90%;
-        margin: 0 auto;
-        flex-direction: column;
-        gap: 25px;
-    }
-
-    .budaya-item {
         width: 100%;
+        padding: 1.2rem;
     }
 
-    .budaya-image {
-        width: 100%;
-        margin-top: 15px;
+    .about p { font-size: 0.95rem; max-width: 100%; }
+
+    /* MUSIK */
+    .musik,
+    .tentang-patrol {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
     }
 
-    .budaya-text {
-        font-size: 14px;
-        line-height: 1.7;
+    .musik-text h1 { font-size: 2.2rem; }
+    .musik-text p { max-width: 100%; }
+    .musik-video { height: 240px; }
+    .patrol-img { height: 220px; }
+    .patrol-text h2 { font-size: 1.6rem; }
+
+    /* WISATA */
+    .pin { font-size: clamp(16px, 5vw, 26px); }
+}
+
+@media (max-width: 576px) {
+    .budaya-container,
+    .kuliner-container,
+    .category-container {
+        grid-template-columns: 1fr;
     }
 
-    /* Musik */
-    .patrol-container {
-        width: 90%;
+    .category-item { height: 180px; }
+
+    .category-item p {
+        bottom: 14%;
+        right: 60px;
+        font-size: 0.85rem;
+        line-height: 1.3;
     }
 
-    .patrol-container img {
-        width: 100%;
+    .home { height: 280px; width: 94%; }
+    .home-text h1 { font-size: 1.4rem; }
+    .home-text p { font-size: 0.85rem; }
+
+    .section-label span::after { width: 50px; }
+
+    .popup .popup-content {
+        width: 92%;
+        padding: 18px;
     }
 
-    .patrol-text {
-        font-size: 14px;
-        line-height: 1.7;
-    }
+    .popup .popup-content img { height: 160px; }
+    .popup .popup-content h3 { font-size: 19px; }
+    .popup .popup-content p { font-size: 14px; }
 }

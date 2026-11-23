@@ -3,41 +3,100 @@
 <html lang="en">
 <head>
     
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Musik</title>
 
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Box Icons -->
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/filled/boxicons-filled.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Yeseva+One&display=swap" rel="stylesheet">
 </head>
 
-<body class="Background">
+<body>
 
-    <div class="box"> 
-        <nav class="navbar">
-            <a class="logo Abril-Fatface" href="home.html">Jember</a>
-            <a class="nav-link" href="wisata.html">Wisata</a>
-            <a class="nav-link" href="kuliner.html">Kuliner</a>
-            <a class="nav-link" href="budayaEvent.html">Budaya dan Event</a>
-            <a class="nav-link" href="musik.html">Musik</a>
-        </nav>
-    </div>
-    
-    <div class="patrol-container">
-        <img src="image/patrol.jpg" alt="Musik Patrol Jember">
+    <!-- Navbar -->
+     <header>
+        <a href="home.html" class="logo"><i class = 'bx bx-leaf-alt'></i> Jember</a>
+
+        <!-- Navbar List -->
+        <ul class="navbar">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="wisata.html">Wisata</a></li>
+            <li><a href="kuliner.html">Kuliner</a></li>
+            <li><a href="budaya.html">Budaya</a></li>
+            <li><a href="musik.html" class="active">Musik</a></li>
+        </ul>
+        <button id="theme-toggle">
+            <i class="bx bx-moon"></i>
+        </button>
+
+     </header>
+
+     <section class="musik">
+
+        <div class="musik-text">
+            <div class="section-label">
+                <span>KEBUDAYAAN JEMBER</span>
+            </div>
+
+            <h1>Musik Patrol</h1>
+
+            <p>
+                Musik Patrol merupakan kesenian khas Jember
+                yang memadukan alat musik tradisional dan modern
+                dengan irama yang meriah.
+            </p>
+
+            <a href="#tentang-patrol" class="btn">
+                Kenali Lebih Dekat
+                <i class="bx bx-right-arrow-alt"></i>
+            </a>
+        </div>
+
+        <div class="musik-video">
+            <video id="patrol-video" controls>
+            <source src="video/musikpatrol.mp4" type="video/mp4">
+            </video>
+        
+            <button class="play-btn" id="play-btn">
+            <i class="bx bx-play"></i>
+            </button>
+        </div>
+     </section>
+
+     <section class="tentang-patrol" id="tentang-patrol">
+
+        <div class="patrol-img">
+            <img src="image/patrol.jpg" alt="Musik Patrol Jember">
+        </div>
 
         <div class="patrol-text">
-            <h1 class="yeseva-one-regular" style="text-align: center">Musik Patrol Jember</h1>
-            <p class="poppins-regular">
-                Patrol merupakan alat musik tradisional khas Jember, Jawa Timur, yang memainkan peran penting dalam budaya lokal.
-                Terbuat dari bahan bambu, alat ini menghasilkan suara unik melalui teknik pukulan pada bambu dengan pola tertentu.
-                Musik patrol awalnya dikenal sebagai bagian dari tradisi membangunkan sahur saat Ramadan, 
-                namun kini fungsinya berkembang dalam berbagai acara seni dan budaya, seperti festival dan perayaan lokal.
+            <div class="section-label">
+                <span>MENGENAL MUSIK PATROL</span>
+            </div>
+
+            <h2>Irama Tradisi yang Meriah</h2>
+
+            <p>
+                Musik Patrol menjadi salah satu kesenian yang
+                menggambarkan kreativitas dan kebersamaan
+                masyarakat Jember. Pertunjukannya menghadirkan
+                perpaduan berbagai alat musik dengan irama yang khas.
             </p>
         </div>
-    </div>
+
+     </section>
+
+     <!-- JavaScript -->
+     <script src="main.js"></script>
 
 </body>
 
